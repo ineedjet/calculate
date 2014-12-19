@@ -3,5 +3,5 @@ When(/^I navigate to the root page$/) do
 end
 
 Then(/^I should see '(\S+)' button$/) do |name|
-  pending # express the regexp above with the code you wish you had
+  find_button name
 end
