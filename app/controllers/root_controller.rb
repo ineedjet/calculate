@@ -1,5 +1,10 @@
 class RootController < ApplicationController
-	def index
+  def index
     @equation = '2+2'
-	end
+  end
+
+  def eval
+    redirect_to root_path
+  end
+  
 end

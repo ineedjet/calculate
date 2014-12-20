@@ -7,7 +7,11 @@ Then(/^I should see '(\S+)' button$/) do |name|
 end
 
 Given(/^I should (not )?see '(.+)'$/) do |term, text|
-  expect(page).not_to have_content text
+  if term 
+    expect(page).not_to have_content text
+  else
+    expect(page).to have_content text
+  end
 end
 
 When(/^I enter '(.+)' into the '(\S+)' input field$/) do |equation, field|
@@ -15,5 +19,5 @@ When(/^I enter '(.+)' into the '(\S+)' input field$/) do |equation, field|
 end
 
 When(/^I click '(\S+)' button$/) do |title|
-  pending # express the regexp above with the code you wish you had
+  click_button title
 end
