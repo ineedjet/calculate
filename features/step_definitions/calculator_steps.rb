@@ -7,7 +7,7 @@ Then(/^I should see '(\S+)' button$/) do |name|
 end
 
 Given(/^I should (not )?see '(\d+)'$/) do |term, text|
-  pending # express the regexp above with the code you wish you had
+  expect(page).not_to have_content text
 end
 
 When(/^I enter '(.+)' into the input field$/) do |equation|
