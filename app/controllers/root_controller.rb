@@ -5,7 +5,8 @@ class RootController < ApplicationController
   end
 
   def calc_eval
-    session[:last_result] = eval params[:equation]
+    securecalc = Dentaku::Calculator.new
+    session[:last_result] = securecalc.evaluate(params[:equation]) rescue nil
     redirect_to root_path
   end
   
