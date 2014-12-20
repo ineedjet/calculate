@@ -1,3 +1,7 @@
 <h1>Привет!</h1>
 
-<%= button_to 'Calculate' %>
+<%= form_tag do %>
+  <%= label_tag :equation, 'Equation to calculate:' %>
+  <%= text_field_tag :equation, @equation %>
+  <%= button_tag 'Calculate' %>
+<% end %>
