@@ -12,3 +12,8 @@ Feature: Basic functionality of a calculator
     And I click 'Calculate' button
     Then I should see '4'
   
+  Scenario: Calculator should be secure
+    Given I navigate to the root page
+    When I enter 'Rails.configuration' into the 'equation' input field
+    And I click 'Calculate' button
+    Then I should not see 'Rails::Application::Configuration'
