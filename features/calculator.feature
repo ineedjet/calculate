@@ -8,7 +8,7 @@ Feature: Basic functionality of a calculator
   Scenario: I can calculate equation
   	Given I navigate to the root page
   	And I should not see '4'
-    When I enter '2+2' into the input field
+    When I enter '2+2' into the 'equation' input field
     And I click 'Calculate' button
     Then I should see '4'
   
