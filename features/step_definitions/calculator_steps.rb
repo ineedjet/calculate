@@ -21,3 +21,8 @@ end
 When(/^I click '(\S+)' button$/) do |title|
   click_button title
 end
+
+When(/^I calculate '(\S+)'$/) do |equation|
+  step "I enter '#{equation}' into the 'equation' input field"
+  step "I click 'Calculate' button"
+end

@@ -34,6 +34,7 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 # Use ActiveModel has_secure_password
