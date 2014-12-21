@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'dentaku'
+gem 'devise'
 
 group :test do
   gem 'cucumber-rails', require: false

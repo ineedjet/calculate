@@ -1,7 +1,7 @@
 When(/^I click on the '(\S+)' link$/) do |link|
-  pending # express the regexp above with the code you wish you had
+  click_link link
 end
 
 Then(/^I should see '(\S+)' input field$/) do |field|
-  pending # express the regexp above with the code you wish you had
+  find_field field
 end
