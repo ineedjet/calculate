@@ -15,7 +15,6 @@ Feature: Registered users need to have their own private calculations
     Then I should see '4'
     And I should see '9'
 
-@wip
   Scenario: I can see my calculates only if I authorised
     Given There is a user in the database
     And I login as that user

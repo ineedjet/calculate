@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141221135746) do
+ActiveRecord::Schema.define(version: 20141221150742) do
 
   create_table "calculations", force: true do |t|
     t.string   "input"
     t.string   "output"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "calculations", ["user_id"], name: "index_calculations_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
