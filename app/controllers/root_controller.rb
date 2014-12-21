@@ -9,10 +9,10 @@ class RootController < ApplicationController
   end
 
   def calc_eval
-    calculation = Calculation.evaluate(params[:equation])
-    calculation.user = current_user
-    calculation.save!
-    redirect_to root_path
+    @calculation = Calculation.evaluate(params[:equation])
+    @calculation.user = current_user
+    @calculation.save!
+    redirect_to root_path unless request.xhr?
   end
   
 end

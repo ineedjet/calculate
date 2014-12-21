@@ -3,12 +3,12 @@
 <%= link_to "Login", new_user_session_path %>
 <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
 
-<%= form_tag do %>
+<%= form_tag root_path, remote: true do %>
   <%= label_tag :equation, 'Equation to calculate:' %>
   <%= text_field_tag :equation, @equation %>
   <%= button_tag 'Calculate' %>
 <% end %>
 
-<table>
+<table id="results_table">
   <%= render @results %>
 </table>
