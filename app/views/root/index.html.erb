@@ -1,6 +1,7 @@
 <h1>Привет!</h1>
 
 <%= link_to "Login", new_user_session_path %>
+<%= button_to 'Logout', destroy_user_session_path, method: :delete %>
 
 <%= form_tag do %>
   <%= label_tag :equation, 'Equation to calculate:' %>
